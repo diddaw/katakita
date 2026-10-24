@@ -1,0 +1,92 @@
+.editor-wrapper {
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #FFFFFF;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.editor-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 16px;
+    background: #F9FAFB;
+    border-bottom: 1px solid #E5E7EB;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.editor-toolbar button {
+    background: #FFFFFF;
+    color: #374151;
+    border: 1px solid #D1D5DB;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+    min-width: 34px;
+}
+
+.editor-toolbar button:hover {
+    background: #1B7B73;
+    color: #FFFFFF;
+    border-color: #1B7B73;
+}
+
+.editor-toolbar button.active {
+    background: #1B7B73;
+    color: #FFFFFF;
+    border-color: #1B7B73;
+}
+
+.editor-toolbar select {
+    background: #FFFFFF;
+    color: #374151;
+    border: 1px solid #D1D5DB;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.editor-toolbar select:hover {
+    border-color: #1B7B73;
+}
+
+.toolbar-divider {
+    color: #D1D5DB;
+    margin: 0 4px;
+    font-size: 18px;
+}
+
+.rich-editor {
+    min-height: 500px;
+    width: 100%;
+    padding: 40px 60px;
+    background: #FFFFFF;
+    color: #111827;
+    font-family: 'Georgia', serif;
+    font-size: 17px;
+    line-height: 2;
+    outline: none;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.rich-editor p {
+    margin-bottom: 16px;
+}
+
+.rich-editor:focus {
+    background: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .rich-editor {
+        padding: 20px;
+    }
+}

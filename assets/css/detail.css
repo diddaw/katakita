@@ -1,0 +1,463 @@
+body {
+    background-color: #FFFFFF !important;
+    color: #4B5563 !important;
+}
+
+.detail-wrapper {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+    color: #111827; 
+}
+
+.detail-top {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: flex-start;
+}
+
+.detail-cover {
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.detail-cover img {
+    width: 200px; 
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.detail-info {
+    flex: 1;
+}
+
+.detail-tipe {
+background: #1B7B73; 
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.detail-judul {
+    font-size: 24px;
+    margin: 10px 0 4px;
+    color: #111827;
+}
+
+.detail-author {
+    color: #6B7280; 
+    margin-bottom: 12px;
+}
+
+.detail-deskripsi {
+    color: #4B5563 !important;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.detail-genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.genre-tag {
+    background: #F3F4F6; 
+    color: #4B5563; 
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    border: 1px solid #E5E7EB;
+}
+
+.btn-start {
+    display: inline-block;
+    background: #1B7B73; 
+    color: #fff;
+    padding: 10px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-start:hover {background: #145D57;  }
+
+.detail-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid #E5E7EB;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: #94A3B8;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s;
+}
+
+.tab-btn.active {
+   color: #1B7B73;
+    border-bottom: 2px solid #1B7B73;
+}
+
+.episode-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+  border-bottom: 1px solid #E5E7EB;
+    text-decoration: none;
+    color: #111827;
+    transition: background 0.2s;
+}
+
+.episode-item:hover { background: #F9FAFB; }
+
+.episode-cover img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.episode-info { flex: 1; }
+
+.episode-info h3 {
+    color: #111827;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.episode-spoiler {
+    font-size: 13px;
+    color: #6B7280;
+    margin-bottom: 4px;
+}
+
+.episode-date {
+    font-size: 12px;
+    color: #64748B;
+}
+
+.btn-baca {
+    background: #1B7B73;   
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    border: none;
+}
+
+.empty-msg {
+    color: #64748B;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.chapter-content {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.9;
+    color: #374151;
+    letter-spacing: 0.2px;
+}
+
+.chapter-content p,
+.chapter-content div {
+    margin-bottom: 1em;
+}
+
+.chapter-content br {
+    display: block;
+    content: "";
+    margin-top: 0.5em;
+}
+
+.detail-wrapper h1 {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 22px;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.detail-wrapper h2 {
+    max-width: 700px;
+    margin: 0 auto 24px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+.chapter-nav {
+    max-width: 700px;
+    margin: 32px auto 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.chapter-nav a {
+    flex: 1;
+    text-align: center;
+    padding: 14px 16px;
+    background: #1E293B;
+    border-radius: 10px;
+    color: #F8FAFC;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #334155;
+}
+
+.chapter-nav a:hover {
+    background: #273449;
+}
+
+.chapter-nav .nav-placeholder {
+    flex: 1;
+}
+
+.chapter-content img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+    .chapter-content {
+        font-size: 16px;
+        line-height: 1.8;
+        padding: 0 4px;
+    }
+    .detail-wrapper h1 {
+        font-size: 19px;
+        padding: 0 4px;
+    }
+    .detail-wrapper h2 {
+        font-size: 14px;
+        padding: 0 4px;
+    }
+}
+
+
+.paywall-card {
+    max-width: 420px;
+    margin: 40px auto;
+    background: #1E293B;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+}
+
+.paywall-card .lock-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #334155;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 22px;
+}
+
+.paywall-card .price {
+    font-size: 26px;
+    font-weight: 700;
+    color: #F8FAFC;
+    margin: 12px 0 20px;
+}
+
+.paywall-card .price span {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #94A3B8;
+    margin-bottom: 4px;
+}
+
+.btn-beli {
+    display: inline-block;
+    width: 100%;
+    padding: 14px;
+ background: #1B7B73; 
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+.btn-beli:hover {
+    background: #145D57;
+}
+
+.paywall-login {
+    color: #94A3B8;
+    font-size: 14px;
+}
+
+.paywall-login a {
+    color: #3B82F6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ==== Halaman Beli Chapter (beli.php) ==== */
+
+.beli-wrapper {
+    max-width: 460px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+.beli-title {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.beli-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #3B82F6;
+    margin-bottom: 24px;
+}
+
+.rekening-card {
+    background: #1E293B;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.rekening-card .label {
+    font-size: 12px;
+    color: #94A3B8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.rekening-card .bank-info {
+    font-size: 19px;
+    font-weight: 700;
+    color: #F8FAFC;
+    margin-bottom: 4px;
+}
+
+.rekening-card .pemilik {
+    font-size: 14px;
+    color: #94A3B8;
+}
+
+.upload-box {
+    background: #1E293B;
+    border: 1px dashed #475569;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.upload-box label {
+    display: block;
+    font-size: 14px;
+    color: #F8FAFC;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.upload-box input[type="file"] {
+    width: 100%;
+    color: #94A3B8;
+    font-size: 13px;
+}
+
+.btn-kirim-bukti {
+    width: 100%;
+    padding: 14px;
+    background: #22C55E;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-kirim-bukti:hover {
+    background: #16A34A;
+}
+
+@media (max-width: 480px) {
+    .paywall-card, .beli-wrapper {
+        margin: 24px auto;
+    }
+}
+
+.btn-bookmark {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #FFFFFF; 
+    border: 1.5px solid #E5E7EB; 
+    color: #4B5563; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s ease, background 0.2s, border-color 0.2s;
+    flex-shrink: 0;
+}
+
+.btn-bookmark .material-symbols-rounded {
+    font-size: 24px;
+    transition: font-variation-settings 0.2s;
+}
+
+.btn-bookmark:hover {
+    background: #F9FAFB;
+    border-color: #1B7B73;
+    color: #1B7B73;
+}
+
+.btn-bookmark:active {
+    transform: scale(0.88);
+}
+
+.btn-bookmark.active {
+    background: #1B7B73; 
+    border-color: #1B7B73;
+    color: white;
+    animation: bookmarkPop 0.35s ease;
+}
+
+.btn-bookmark.active .material-symbols-rounded {
+    font-variation-settings: 'FILL' 1;
+}
+
+@keyframes bookmarkPop {
+    0% { transform: scale(1); }
+    35% { transform: scale(1.25); }
+    60% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}

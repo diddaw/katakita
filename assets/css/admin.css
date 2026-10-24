@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #FFFFFF !important;
+    color: #4B5563 !important;
+}
+
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+.admin-sidebar {
+    width: 240px;
+    background: #0E2522; 
+    padding: 24px 0;
+    position: fixed;
+    height: 100vh;
+}
+
+.admin-logo {
+    padding: 0 24px 20px;
+    border-bottom: 1px solid #173B35;
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+}
+
+.admin-logo h2 {
+    font-size: 20px;
+    color: #F8FAFC;
+    margin: 0;
+}
+
+.admin-logo h2 span {
+    color: #34D399;
+}
+.admin-logo img {
+    max-height: 38px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+.admin-sidebar nav ul {
+    list-style: none;
+    margin-top: 16px;
+}
+
+.admin-sidebar nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px;
+    color: #94A3B8;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.admin-sidebar nav ul li a:hover,
+.admin-sidebar nav ul li.active a {
+    background: #173B35;
+    color: #34D399; 
+}
+.admin-main {
+    margin-left: 240px;
+    padding: 32px;
+    width: 100%;
+}
+
+.admin-header {
+    margin-bottom: 32px;
+}
+
+.admin-header h1 {
+    font-size: 24px;
+    margin-bottom: 4px;
+    color: #111827;
+}
+
+.admin-header p {
+    color: #6B7280;
+}
+.admin-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.admin-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 24px;
+    text-decoration: none;
+    color: #111827;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); 
+}
+
+.admin-card:hover {
+    background: #F9FAFB;
+    transform: translateY(-2px);
+}
+
+.admin-card span {
+    font-size: 32px;
+    color: #1B7B73; 
+}
+
+.admin-card h3 {
+    margin: 12px 0 6px;
+    font-size: 16px;
+}
+
+.admin-card p {
+    font-size: 13px;
+    color: #6B7280;
+}
+
+.btn-edit {
+    background: #1B7B73; 
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+.btn-edit:hover {
+    background: #145A53;
+}
+.admin-main form {
+    background: #FFFFFF;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 32px;
+}
+
+.admin-main label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 16px;
+}
+.admin-main input[type="text"],
+.admin-main input[type="number"],
+.admin-main select,
+.admin-main textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 14px;
+    border: 1px solid #D1D5DB !important;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #111827 !important;
+    background: #FFFFFF !important;
+    outline: none;
+    transition: 0.2s ease;
+    display: block;
+}
+
+.admin-main textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+.admin-main input:focus,
+.admin-main select:focus,
+.admin-main textarea:focus {
+    border-color: #1B7B73 !important;
+    background: #FFFFFF !important;
+    box-shadow: 0 0 0 3px rgba(27, 123, 115, 0.15) !important;
+}
+.admin-main button,
+.admin-main input[type="submit"] {
+    background: #1B7B73;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 20px;
+}
+
+.admin-main button:hover,
+.admin-main input[type="submit"]:hover {
+    background: #145A53;
+}
+.admin-main table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #E5E7EB;
+    margin-top: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.admin-main table th,
+.admin-main table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #E5E7EB;
+    color: #4B5563;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.admin-main table th {
+    background: #F9FAFB;
+    font-weight: 600;
+    color: #111827;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.admin-main table tr:hover {
+    background: #F3F4F6;
+}
+.admin-main table img {
+    width: 50px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.admin-main table button,
+.admin-main table input[type="submit"] {
+    background: #EF4444; 
+    padding: 8px 14px;
+    font-size: 12px;
+    margin-top: 0;
+}
+
+.admin-main table button:hover,
+.admin-main table input[type="submit"]:hover {
+    background: #DC2626;
+}
+
