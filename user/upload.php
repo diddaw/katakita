@@ -41,8 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
 
         $ceritaId = $databaseConnection->lastInsertId();
-       $genreIdsUnique = array_unique($genreIds);
-       foreach ($genreIdsUnique as $genreId) {
+        $genreIdsUnique = array_unique($genreIds);
+        foreach ($genreIdsUnique as $genreId) {
             $stmtGenre = $databaseConnection->prepare("INSERT IGNORE INTO cerita_genre (cerita_id, genre_id) VALUES (?, ?)");
             $stmtGenre->execute([$ceritaId, (int) $genreId]);
         }
@@ -54,127 +54,135 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <title>Upload Cerita</title>
     <link rel="stylesheet" href="../assets/css/admin.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
+
 <body>
 
-<div class="admin-container">
+    <div class="admin-container">
 
-    <aside class="admin-sidebar">
-        <div class="admin-logo">
-            <h2>Novel<span>&</span>Komik</h2>
-        </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/codingpenyet/user/dashboard.php">
-                        <span class="material-symbols-rounded">dashboard</span>
-                        Dashboard
-                    </a>
-                </li>
-                <li class="active">
-                    <a href="/codingpenyet/user/upload.php">
-                        <span class="material-symbols-rounded">upload</span>
-                        Upload Cerita
-                    </a>
-                </li>
-                <li>
-                    <a href="/codingpenyet/user/penjualan.php">
-                        <span class="material-symbols-rounded">payments</span>
-                        Dashboard Penjualan
-                    </a>
-                </li>
-                <li>
-                    <a href="/codingpenyet/user/rekening.php">
-                        <span class="material-symbols-rounded">account_balance</span>
-                        Rekening Pembayaran
-                    </a>
-                </li>
-               <li>
-                    <a href="/codingpenyet/profile.php">
-                     <span class="material-symbols-rounded">account_circle</span>
-                     Profile
-                     </a>
-                </li>
-                <li>
-                    <a href="/codingpenyet/logout.php">
-                        <span class="material-symbols-rounded">logout</span>
-                        Logout
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </aside>
-
-    <main class="admin-main">
-        <div class="admin-header">
-            <div>
-                <h1>Upload Cerita Baru</h1>
-                <p>Cerita akan berstatus pending sampai admin approve.</p>
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <h2>Novel<span>&</span>Komik</h2>
             </div>
-        </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/katakita/user/dashboard.php">
+                            <span class="material-symbols-rounded">dashboard</span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="/katakita/user/upload.php">
+                            <span class="material-symbols-rounded">upload</span>
+                            Upload Cerita
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/katakita/user/penjualan.php">
+                            <span class="material-symbols-rounded">payments</span>
+                            Dashboard Penjualan
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/katakita/user/rekening.php">
+                            <span class="material-symbols-rounded">account_balance</span>
+                            Rekening Pembayaran
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/katakita/profile.php">
+                            <span class="material-symbols-rounded">account_circle</span>
+                            Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/katakita/logout.php">
+                            <span class="material-symbols-rounded">logout</span>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
 
-        <?php if ($errors): ?>
-            <div class="alert alert-error">
-                <?php foreach ($errors as $error): ?>
-                    <p><?= escapeHtml($error) ?></p>
-                <?php endforeach; ?>
+        <main class="admin-main">
+            <div class="admin-header">
+                <div>
+                    <h1>Upload Cerita Baru</h1>
+                    <p>Cerita akan berstatus pending sampai admin approve.</p>
+                </div>
             </div>
-        <?php endif; ?>
 
-        <div class="admin-form-wrapper">
-            <form method="post" enctype="multipart/form-data" class="admin-form" style="flex-direction:column;">
-                <div class="form-group">
-                    <label>Judul</label>
-                    <input type="text" name="judul" value="<?= escapeHtml($_POST['judul'] ?? '') ?>">
+            <?php if ($errors): ?>
+                <div class="alert alert-error">
+                    <?php foreach ($errors as $error): ?>
+                        <p><?= escapeHtml($error) ?></p>
+                    <?php endforeach; ?>
                 </div>
-                <div class="form-group">
-                    <label>Author</label>
-                    <input type="text" name="author" value="<?= escapeHtml($_POST['author'] ?? '') ?>">
-                </div>
-                <div class="form-group">
-                    <label>Deskripsi</label>
-                    <textarea name="deskripsi" rows="4"><?= escapeHtml($_POST['deskripsi'] ?? '') ?></textarea>
-                </div>
-                <div class="form-group">
-                    <label>Tipe</label>
-                    <select name="tipe">
-                        <option value="novel">Novel</option>
-                        <option value="komik">Komik</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Genre</label>
-                    <button type="button" onclick="document.getElementById('genre-list-user').style.display = document.getElementById('genre-list-user').style.display === 'none' ? 'flex' : 'none'" 
-                        class="btn-pilih-genre-custom">
-                        Pilih Genre 
-                    </button>
-                    <div id="genre-list-user" style="display:none; flex-wrap:wrap; gap:8px; margin-top:8px;">
-                        <?php foreach ($genreList as $genre): ?>
-                            <label class="genre-checkbox-item">
-                                <input type="checkbox" name="genre_id[]" value="<?= $genre['id'] ?>">
-                                <?= escapeHtml($genre['nama']) ?>
-                            </label>
-                        <?php endforeach; ?>
+            <?php endif; ?>
+
+            <div class="admin-form-wrapper">
+                <form method="post" enctype="multipart/form-data" class="admin-form" style="flex-direction:column;">
+                    <div class="form-group">
+                        <label>Judul</label>
+                        <input type="text" name="judul" value="<?= escapeHtml($_POST['judul'] ?? '') ?>">
                     </div>
-                    <p style="font-size:12px; color:#6B7280; margin-top:6px;">Bisa pilih lebih dari 1 genre.</p>
-                </div> 
+                    <div class="form-group">
+                        <label>Author</label>
+                        <input type="text" name="author" value="<?= escapeHtml($_POST['author'] ?? '') ?>">
+                    </div>
+                    <div class="form-group">
+                        <label>Deskripsi</label>
+                        <textarea name="deskripsi" rows="4"><?= escapeHtml($_POST['deskripsi'] ?? '') ?></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Tipe</label>
+                        <select name="tipe">
+                            <option value="novel">Novel</option>
+                            <option value="komik">Komik</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Genre</label>
+                        <button type="button" onclick="document.getElementById('genre-list-user').style.display = document.getElementById('genre-list-user').style.display === 'none' ? 'flex' : 'none'"
+                            class="btn-pilih-genre-custom">
+                            Pilih Genre
+                        </button>
+                        <div id="genre-list-user" style="display:none; flex-wrap:wrap; gap:8px; margin-top:8px;">
+                            <?php foreach ($genreList as $genre): ?>
+                                <label class="genre-checkbox-item">
+                                    <input type="checkbox" name="genre_id[]" value="<?= $genre['id'] ?>">
+                                    <?= escapeHtml($genre['nama']) ?>
+                                </label>
+                            <?php endforeach; ?>
+                        </div>
+                        <p style="font-size:12px; color:#6B7280; margin-top:6px;">Bisa pilih lebih dari 1 genre.</p>
+                    </div>
 
-                <div class="form-group">
-                    <label>Cover Image</label>
-                    <input type="file" name="cover_image" accept=".jpg,.jpeg,.png,.webp">
-                    <p class="form-hint">Format JPG, PNG, atau WEBP. Maksimal 2MB.</p>
-                </div>
-                <button type="submit" class="btn-approve" style="width:fit-content;">Upload</button>
-            </form>
-        </div>
-    </main>
+                    <div class="custom-file-upload">
+                        <label class="input-label">Cover Image</label>
+                        <input type="file" id="cover_image" name="cover_image" accept=".jpg, .jpeg, .png, .webp" required>
+                        <label for="cover_image" class="upload-area">
+                            <span class="material-symbols-rounded"></span>
+                            <span class="upload-desc">Format JPG, PNG, atau WEBP. Maksimal 2MB.</span>
+                        </label>
+                    </div>
+                    <button type="submit" name="submit" style="background: #1B7B73; color: #FFFFFF; border: none; padding: 10px 24px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; margin-top: 20px;">Upload</button>
+        </main>
 
-</div>
-
+    </div>
 </body>
+<script>
+document.getElementById('cover_image').addEventListener('change', function(e) {
+    var fileName = e.target.files[0].name;
+    document.getElementById('file-name-display').textContent = fileName;
+});
+</script>
 </html>

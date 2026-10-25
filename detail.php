@@ -69,7 +69,7 @@ $deskripsiPendek = $isLong ? mb_substr($deskripsiLengkap, 0, $maxChar) . '...' :
 
                 <?php if ($isLong): ?>
                     <button type="button" id="btn-toggle-desc" onclick="toggleDeskripsi()" 
-                        style="background: none; border: none; color: #1B7B73; font-weight: 600; cursor: pointer; padding: 0; font-size: 13px; margin-top: 6px; outline: none;">
+                        style="background: none; border: none; color: #FF544C; font-weight: 600; cursor: pointer; padding: 0; font-size: 13px; margin-top: 6px; outline: none;">
                         Selengkapnya 
                     </button>
                     <script>

@@ -38,7 +38,7 @@ $hasLogo = file_exists(__DIR__ . '/../' . $logoPath);
                 <?php if ($hasLogo): ?>
                     <img src="<?= $logoPath ?>?v=<?= filemtime(__DIR__ . '/../' . $logoPath) ?>" alt="Logo" style="height:32px;">
                 <?php else: ?>
-                    Novel<span style="color:#1B7B73;">&</span>Kami
+                    Novel<span style="color:#FF544C;">&</span>Kami
                 <?php endif; ?>
             </a>
         </div>

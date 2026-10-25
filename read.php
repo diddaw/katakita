@@ -66,7 +66,7 @@ $images = ($bolehBaca && $chapter['tipe_konten'] === 'gambar') ? $ceritaObject->
         .read-header h2 {
             font-size: 16px;
             font-weight: 600;
-            color: #1B7B73;
+            color: #FF544C;
         }
         .paywall-wrapper {
             display: flex;
@@ -88,7 +88,7 @@ $images = ($bolehBaca && $chapter['tipe_konten'] === 'gambar') ? $ceritaObject->
             height: 64px !important;
             border-radius: 50% !important;
             background: #ECFDF5 !important;
-            color: #1B7B73 !important;
+            color: #FF544C !important;
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
@@ -112,7 +112,7 @@ $images = ($bolehBaca && $chapter['tipe_konten'] === 'gambar') ? $ceritaObject->
         .btn-beli {
             display: block !important;
             width: 100% !important;
-            background: #1B7B73 !important;
+            background: #FF544C !important;
             color: #FFFFFF !important;
             text-decoration: none !important;
             padding: 14px 20px !important;
@@ -122,14 +122,14 @@ $images = ($bolehBaca && $chapter['tipe_konten'] === 'gambar') ? $ceritaObject->
             transition: background 0.2s !important;
         }
         .btn-beli:hover {
-            background: #145E58 !important;
+            background: #FF544C !important;
         }
         .paywall-login {
             color: #4B5563 !important;
             font-size: 14px !important;
         }
         .paywall-login a {
-            color: #1B7B73 !important;
+            color: #FF544C !important;
             font-weight: 600 !important;
             text-decoration: none !important;
         }
@@ -160,7 +160,7 @@ $images = ($bolehBaca && $chapter['tipe_konten'] === 'gambar') ? $ceritaObject->
         .chapter-nav a {
             background: #FFFFFF !important;
             border: 1px solid #D1D5DB !important;
-            color: #1B7B73 !important;
+            color: #FF544C !important;
             padding: 10px 18px !important;
             border-radius: 8px !important;
             font-size: 14px !important;
@@ -170,7 +170,7 @@ $images = ($bolehBaca && $chapter['tipe_konten'] === 'gambar') ? $ceritaObject->
         }
         .chapter-nav a:hover {
             background: #F3F4F6 !important;
-            border-color: #1B7B73 !important;
+            border-color: #FF544C !important;
         }
         .nav-placeholder {
             visibility: hidden;

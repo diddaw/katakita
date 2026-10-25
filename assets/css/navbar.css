@@ -4,7 +4,7 @@
     justify-content: space-between;
     height: 64px;
     padding: 0 24px;
-    background: linear-gradient(135deg, #1B7B73 0%, #145A53 100%);
+    background: linear-gradient(135deg, #FF544C);
     border-bottom: none; 
     position: sticky;
     top: 0;
@@ -147,7 +147,7 @@
 
 .nav-link:hover {
     background: #F3F4F6;
-    color: #1B7B73; 
+    color: #FF544C; 
 }
 
 .nav-icon {

@@ -32,15 +32,15 @@
 }
 
 .editor-toolbar button:hover {
-    background: #1B7B73;
+    background: #FF544C;
     color: #FFFFFF;
-    border-color: #1B7B73;
+    border-color: #FF544C;
 }
 
 .editor-toolbar button.active {
-    background: #1B7B73;
+    background: #FF544C;
     color: #FFFFFF;
-    border-color: #1B7B73;
+    border-color: #FF544C;
 }
 
 .editor-toolbar select {
@@ -54,7 +54,7 @@
 }
 
 .editor-toolbar select:hover {
-    border-color: #1B7B73;
+    border-color: #FF544C;
 }
 
 .toolbar-divider {

@@ -31,6 +31,7 @@ $pageTitle = 'Kelola Cerita';
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $pageTitle ?></title>
     <link rel="stylesheet" href="../assets/css/admin.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -86,7 +87,7 @@ $pageTitle = 'Kelola Cerita';
                 <?php foreach ($ceritaList as $cerita): ?>
                 <?php 
                     $statusApproval = $cerita['approval_status'] ?? 'pending';
-                    $bgApprove = ($statusApproval === 'approved') ? '#1B7B73' : '#EF4444'; 
+                    $bgApprove = ($statusApproval === 'approved') ? '#FF544C' : '#EF4444'; 
                     $bgReject = ($statusApproval === 'rejected') ? '#DC2626' : '#94A3B8'; 
                 ?>
                 <tr>

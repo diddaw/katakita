@@ -16,7 +16,7 @@ body {
 }
 .admin-sidebar {
     width: 240px;
-    background: #0E2522; 
+    background: #1C0F0E;
     padding: 24px 0;
     position: fixed;
     height: 100vh;
@@ -24,7 +24,7 @@ body {
 
 .admin-logo {
     padding: 0 24px 20px;
-    border-bottom: 1px solid #173B35;
+    border-bottom: 1px solid #2E1716; 
     display: flex;
     align-items: center;
     min-height: 60px;
@@ -37,7 +37,7 @@ body {
 }
 
 .admin-logo h2 span {
-    color: #34D399;
+    color: #FF544C; 
 }
 .admin-logo img {
     max-height: 38px;
@@ -61,8 +61,8 @@ body {
 }
 .admin-sidebar nav ul li a:hover,
 .admin-sidebar nav ul li.active a {
-    background: #173B35;
-    color: #34D399; 
+    background: rgba(255, 84, 76, 0.12); 
+    color: #FF544C;
 }
 .admin-main {
     margin-left: 240px;
@@ -107,7 +107,7 @@ body {
 
 .admin-card span {
     font-size: 32px;
-    color: #1B7B73; 
+    color: #FF544C; 
 }
 
 .admin-card h3 {
@@ -121,7 +121,7 @@ body {
 }
 
 .btn-edit {
-    background: #1B7B73; 
+    background: #FF544C; 
     color: white;
     border: none;
     padding: 6px 12px;
@@ -132,7 +132,7 @@ body {
     transition: 0.2s;
 }
 .btn-edit:hover {
-    background: #145A53;
+    background: #fa392f;
 }
 .admin-main form {
     background: #FFFFFF;
@@ -175,13 +175,13 @@ body {
 .admin-main input:focus,
 .admin-main select:focus,
 .admin-main textarea:focus {
-    border-color: #1B7B73 !important;
+    border-color: #FF544C !important;
     background: #FFFFFF !important;
-    box-shadow: 0 0 0 3px rgba(27, 123, 115, 0.15) !important;
+    box-shadow: 0 0 0 3px rgba(255, 84, 76, 0.15) !important; 
 }
 .admin-main button,
 .admin-main input[type="submit"] {
-    background: #1B7B73;
+    background: #FF544C;
     color: #FFFFFF;
     border: none;
     padding: 10px 20px;
@@ -195,7 +195,7 @@ body {
 
 .admin-main button:hover,
 .admin-main input[type="submit"]:hover {
-    background: #145A53;
+    background: #fd4a41;
 }
 .admin-main table {
     width: 100%;
@@ -249,5 +249,111 @@ body {
 .admin-main table button:hover,
 .admin-main table input[type="submit"]:hover {
     background: #DC2626;
+}
+
+@media (max-width: 768px) {
+    .admin-container { flex-direction: column; }
+    .admin-sidebar { 
+        width: 100% !important; 
+        position: relative !important; 
+        height: auto !important; 
+        min-height: auto; 
+        padding: 16px; 
+    }
+    .admin-sidebar nav ul { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .admin-sidebar nav ul li { flex: 1 1 calc(50% - 8px); }
+    .admin-sidebar nav ul li a { padding: 8px 12px; font-size: 13px; justify-content: center; }
+    .admin-main { margin-left: 0 !important; padding: 16px; width: 100%; }
+    .admin-cards { grid-template-columns: 1fr; }
+    .admin-table { display: block; overflow-x: auto; white-space: nowrap; width: 100%; }
+}
+
+.custom-file-upload {
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+.input-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+}
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+.upload-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    background: #F8FAFC;
+    border: 2px dashed #CBD5E1;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    max-width: 200px;
+}
+.upload-area:hover {
+    background: #F1F5F9;
+    border-color: #FF544C;
+}
+.upload-area .material-symbols-rounded {
+    font-size: 30px;
+    color: #94A3B8;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+.upload-area:hover .material-symbols-rounded {
+    color: #FF544C;
+}
+.upload-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 6px;
+}
+.upload-desc {
+    font-size: 13px;
+    color: #64748B;
+}
+@media (max-width: 768px) {
+    .admin-container { flex-direction: column; }
+    .admin-sidebar { 
+        width: 100% !important; 
+        position: relative !important; 
+        height: auto !important; 
+        min-height: auto; 
+        padding: 16px 0 0 0; 
+    }
+    .admin-logo { padding: 0 16px 16px; }
+    /* Mengubah menu admin menjadi bisa digeser ke samping di HP */
+    .admin-sidebar nav ul { 
+        display: flex; 
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
+        gap: 8px; 
+        margin-top: 0;
+        padding: 0 16px 12px 16px; 
+    }
+    .admin-sidebar nav ul::-webkit-scrollbar { display: none; }
+    .admin-sidebar nav ul li { flex: 0 0 auto; }
+    .admin-sidebar nav ul li a { 
+        padding: 8px 16px; 
+        font-size: 13px; 
+        white-space: nowrap; 
+        border-radius: 8px; 
+    }
+    .admin-main { margin-left: 0 !important; padding: 16px; width: 100%; }
+    /* Membuat kotak statistik menjadi 2 kolom di layar tablet/HP besar */
+    .admin-cards { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .admin-table { display: block; overflow-x: auto; white-space: nowrap; width: 100%; }
+}
+
+@media (max-width: 480px) {
+    /* Baru ubah kotak menjadi 1 kolom penuh di layar HP kecil */
+    .admin-cards { grid-template-columns: 1fr; }
 }
 

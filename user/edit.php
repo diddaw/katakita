@@ -77,37 +77,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <nav>
             <ul>
                 <li>
-                    <a href="/codingpenyet/user/dashboard.php">
+                    <a href="/katakita/user/dashboard.php">
                         <span class="material-symbols-rounded">dashboard</span>
                         Dashboard
                     </a>
                 </li>
                 <li>
-                    <a href="/codingpenyet/user/upload.php">
+                    <a href="/katakita/user/upload.php">
                         <span class="material-symbols-rounded">upload</span>
                         Upload Cerita
                     </a>
                 </li>
                 <li>
-                    <a href="/codingpenyet/user/riwayat_transaksi.php">
+                    <a href="/katakita/user/riwayat_transaksi.php">
                         <span class="material-symbols-rounded">receipt_long</span>
                         Riwayat Pembelian
                     </a>
                 </li>
                 <li>
-                    <a href="/codingpenyet/user/penjualan.php">
+                    <a href="/katakita/user/penjualan.php">
                         <span class="material-symbols-rounded">payments</span>
                         Dashboard Penjualan
                     </a>
                 </li>
                 <li>
-                     <a href="/codingpenyet/profile.php">
+                     <a href="/katakita/profile.php">
                         <span class="material-symbols-rounded">account_circle</span>
                         Profile
                     </a>
                 </li>
                 <li>
-                    <a href="/codingpenyet/logout.php">
+                    <a href="/katakita/logout.php">
                         <span class="material-symbols-rounded">logout</span>
                         Logout
                     </a>
@@ -119,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <main class="admin-main">
         <div class="admin-header">
             <h1>Edit Cerita</h1>
-            <a href="/codingpenyet/user/dashboard.php" style="color:#6B7280; font-size:14px; text-decoration:none;">← Kembali</a>
+            <a href="/katakita/user/dashboard.php" style="color:#6B7280; font-size:14px; text-decoration:none;">← Kembali</a>
         </div>
 
         <?php if ($errors): ?>
@@ -157,7 +157,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="form-group">
                 <label>Cover Image</label>
                 <?php if ($cerita['cover_image']): ?>
-                    <img src="/codingpenyet/assets/data/images/<?= escapeHtml($cerita['cover_image']) ?>" 
+                    <img src="/katakita/assets/data/images/<?= escapeHtml($cerita['cover_image']) ?>" 
                          width="80" style="border-radius:8px; margin-bottom:8px; display:block;">
                 <?php endif; ?>
                 <input type="file" name="cover_image" accept=".jpg,.jpeg,.png,.webp">
@@ -177,7 +177,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             $isCheck = in_array($genre['id'], $_POST['genre_id'] ?? $selectedGenres); 
                         ?>
                         <label style="display:flex; align-items:center; gap:6px; cursor:pointer; background:#FFFFFF; color:#374151; padding:6px 12px; border-radius:8px; border:1px solid #D1D5DB; transition: 0.2s;">
-                            <input type="checkbox" name="genre_id[]" value="<?= $genre['id'] ?>" style="accent-color: #1B7B73;" <?= $isCheck ? 'checked' : '' ?>>
+                            <input type="checkbox" name="genre_id[]" value="<?= $genre['id'] ?>" style="accent-color: #FF544C;" <?= $isCheck ? 'checked' : '' ?>>
                             <?= escapeHtml($genre['nama']) ?>
                         </label>
                     <?php endforeach; ?>
@@ -185,7 +185,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <p style="font-size:12px; color:#6B7280; margin-top:6px;">Bisa pilih lebih dari 1 genre.</p>
             </div>
             
-            <button type="submit" class="btn-approve" style="width:fit-content; background:#1B7B73; color:#FFFFFF; border:none; padding:10px 24px; border-radius:8px; cursor:pointer; font-weight:600; margin-top:12px;">Simpan Perubahan</button>
+            <button type="submit" class="btn-approve" style="width:fit-content; background:#FF544C; color:#FFFFFF; border:none; padding:10px 24px; border-radius:8px; cursor:pointer; font-weight:600; margin-top:12px;">Simpan Perubahan</button>
         </form>
     </main>
 

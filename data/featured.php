@@ -1,4 +1,5 @@
 <?php
+/** @var PDO $databaseConnection */
 $stmtFeatured = $databaseConnection->prepare("
     SELECT * FROM cerita WHERE koleksi_spesial = 1 ORDER BY created_at DESC
 ");

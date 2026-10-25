@@ -30,7 +30,7 @@ body {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: #1B7B73;
+    background: #FF544C;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,7 +98,7 @@ body {
 }
 
 .profile-menu a span.material-symbols-rounded {
-    color: #1B7B73;
+    color: #FF544C;
     font-size: 20px;
 }
 
@@ -118,7 +118,7 @@ body {
 }
 
 .cerita-count {
-    background: #1B7B73;
+    background: #FF544C;
     color: white;
     padding: 2px 8px;
     border-radius: 999px;
@@ -141,4 +141,28 @@ body {
 
 .btn-logout:hover {
     background: #DC2626;
+}
+@media (max-width: 768px) {
+    .profile-wrapper { 
+        width: 100%; 
+        padding: 16px; 
+        margin-top: 0; 
+    }
+    .profile-card { 
+        padding: 24px 16px; 
+        border-radius: 12px; 
+    }
+    .profile-avatar {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+    /* Memperbaiki list menu user agar pas dengan layar */
+    .profile-menu { 
+        padding: 0; 
+        border-radius: 12px; 
+    }
+    .profile-menu a {
+        padding: 14px 16px;
+    }
 }

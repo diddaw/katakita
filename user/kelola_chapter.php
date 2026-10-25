@@ -126,19 +126,19 @@ $chapters = $stmtChapter->fetchAll();
         </div>
         <nav>
             <ul>
-                <li><a href="/codingpenyet/user/dashboard.php">
+                <li><a href="/katakita/user/dashboard.php">
                     <span class="material-symbols-rounded">dashboard</span>
                     Dashboard
                 </a></li>
-                <li><a href="/codingpenyet/user/upload.php">
+                <li><a href="/katakita/user/upload.php">
                     <span class="material-symbols-rounded">upload</span>
                     Upload Cerita
                 </a></li>
-                <li><a href="/codingpenyet/profile.php">
+                <li><a href="/katakita/profile.php">
                     <span class="material-symbols-rounded">account_circle</span>
                     Profile
                 </a></li>
-                <li><a href="/codingpenyet/logout.php">
+                <li><a href="/katakita/logout.php">
                     <span class="material-symbols-rounded">logout</span>
                     Logout
                 </a></li>
@@ -149,7 +149,7 @@ $chapters = $stmtChapter->fetchAll();
     <main class="admin-main">
         <div class="admin-header">
             <h1>Kelola Chapter — <?= escapeHtml($cerita['judul']) ?> <span style="color:#94A3B8; font-size:14px;">(<?= strtoupper(escapeHtml($cerita['tipe'])) ?>)</span></h1>
-            <a href="/codingpenyet/user/dashboard.php" style="color:#94A3B8; font-size:14px;">← Kembali ke Dashboard</a>
+            <a href="/katakita/user/dashboard.php" style="color:#94A3B8; font-size:14px;">← Kembali ke Dashboard</a>
         </div>
 
         <?php if ($errors): ?>

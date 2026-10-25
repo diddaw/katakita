@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .card-buy .price {
             font-size: 26px;
             font-weight: 800;
-            color: #1B7B73;
+            color: #FF544C;
             margin-bottom: 24px;
         }
 
@@ -166,7 +166,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         .btn-submit-proof {
             width: 100%;
-            background: #1B7B73 !important;
+            background: #FF544C !important;
             color: #FFFFFF !important;
             border: none !important;
             padding: 12px !important;

@@ -40,27 +40,27 @@ $semuaTransaksi = $ceritaObject->getTransaksiBySeller($userId);
         <div class="admin-logo"><h2>Novel<span>&</span>Komik</h2></div>
         <nav>
             <ul>
-                <li><a href="/codingpenyet/user/dashboard.php">
+                <li><a href="/katakita/user/dashboard.php">
                     <span class="material-symbols-rounded">dashboard</span>
                     Dashboard
                 </a></li>
-                <li><a href="/codingpenyet/user/upload.php">
+                <li><a href="/katakita/user/upload.php">
                     <span class="material-symbols-rounded">upload</span>
                     Upload Cerita
                 </a></li>
-                <li><a href="/codingpenyet/user/riwayat_transaksi.php">
+                <li><a href="/katakita/user/riwayat_transaksi.php">
                     <span class="material-symbols-rounded">receipt_long</span>
                     Riwayat Pembelian
                 </a></li>
-                <li class="active"><a href="/codingpenyet/user/penjualan.php">
+                <li class="active"><a href="/katakita/user/penjualan.php">
                     <span class="material-symbols-rounded">payments</span>
                     Dashboard Penjualan
                 </a></li>
-                <li><a href="/codingpenyet/profile.php">
+                <li><a href="/katakita/profile.php">
                     <span class="material-symbols-rounded">account_circle</span>
                     Profile
                 </a></li>
-                <li><a href="/codingpenyet/logout.php">
+                <li><a href="/katakita/logout.php">
                     <span class="material-symbols-rounded">logout</span>
                     Logout
                 </a></li>

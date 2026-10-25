@@ -43,7 +43,7 @@ body {
     margin-bottom: 24px; 
 }
 
-.alert-success { background: #ECFDF5; color: #065F46; border: 1px solid #A7F3D0; }
+.alert-success { background: #ECFDF5; color: #991B1B; border: 1px solid #e66161; }
 .alert-error { background: #FEE2E2; color: #991B1B; border: 1px solid #FECACA; }
 .foto-profil-wrapper {
     display: flex;
@@ -61,7 +61,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #1B7B73;
+    background: #FF544C;
 }
 .foto-preview img {
     width: 100%;
@@ -79,7 +79,7 @@ body {
 }
 .ganti-teks {
     font-size: 13px;
-    color: #1B7B73;
+    color: #FF544C;
     font-weight: 600;
     cursor: pointer;
     text-decoration: none;
@@ -116,13 +116,13 @@ body {
     background: #F9FAFB;
 }
 .form-group input:focus {
-    border-color: #1B7B73;
+    border-color: #FF544C;
     background: #FFFFFF;
     box-shadow: 0 0 0 3px rgba(27,123,115,0.15);
 }
 .btn-save {
     width: 100%;
-    background: #1B7B73;
+    background: #FF544C;
     color: white;
     border: none;
     padding: 14px;
@@ -133,7 +133,7 @@ body {
     transition: 0.2s;
     margin-top: 10px;
 }
-.btn-save:hover { background: #145E58; }
+.btn-save:hover { background: #fc6961; }
 .btn-back {
     display: block;
     text-align: center;

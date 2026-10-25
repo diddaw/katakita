@@ -21,7 +21,7 @@
 }
 
 .featured-box {
-    background: linear-gradient(135deg, #1B7B73 0%, #145A53 100%); 
+    background: linear-gradient(135deg, #FF544C 0%); 
     border-radius: 16px;
     padding: 24px;
     display: flex;
@@ -192,7 +192,7 @@
     font-weight: 600;
 }
 
-.badge-status.ongoing { background: #E0F2F1; color: #1B7B73; }
+.badge-status.ongoing { background: #E0F2F1; color: #FF544C; }
 .badge-status.completed { background: #F3F4F6; color: #4B5563; }
 
 .special-price-row {
@@ -202,7 +202,7 @@
 }
 
 .btn-baca-small {
-    background: #1B7B73; 
+    background: #FF544C; 
     color: #FFFFFF; 
     text-decoration: none; 
     padding: 7px 14px; 

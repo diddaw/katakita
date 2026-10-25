@@ -35,7 +35,7 @@ body {
 }
 
 .detail-tipe {
-background: #1B7B73; 
+background: #FF544C; 
     color: #fff;
     padding: 4px 10px;
     border-radius: 4px;
@@ -78,7 +78,7 @@ background: #1B7B73;
 
 .btn-start {
     display: inline-block;
-    background: #1B7B73; 
+    background: #FF544C; 
     color: #fff;
     padding: 10px 28px;
     border-radius: 8px;
@@ -87,7 +87,7 @@ background: #1B7B73;
     transition: background 0.2s;
 }
 
-.btn-start:hover {background: #145D57;  }
+.btn-start:hover {background: #FF544C;  }
 
 .detail-tabs {
     display: flex;
@@ -108,8 +108,8 @@ background: #1B7B73;
 }
 
 .tab-btn.active {
-   color: #1B7B73;
-    border-bottom: 2px solid #1B7B73;
+   color: #FF544C;
+    border-bottom: 2px solid #FF544C;
 }
 
 .episode-item {
@@ -152,7 +152,7 @@ background: #1B7B73;
 }
 
 .btn-baca {
-    background: #1B7B73;   
+    background: #FF544C;   
     color: #fff;
     padding: 6px 16px;
     border-radius: 20px;
@@ -296,7 +296,7 @@ background: #1B7B73;
     display: inline-block;
     width: 100%;
     padding: 14px;
- background: #1B7B73; 
+ background: #FF544C; 
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -436,8 +436,8 @@ background: #1B7B73;
 
 .btn-bookmark:hover {
     background: #F9FAFB;
-    border-color: #1B7B73;
-    color: #1B7B73;
+    border-color: #FF544C;
+    color: #FF544C;
 }
 
 .btn-bookmark:active {
@@ -445,8 +445,8 @@ background: #1B7B73;
 }
 
 .btn-bookmark.active {
-    background: #1B7B73; 
-    border-color: #1B7B73;
+    background: #FF544C; 
+    border-color: #FF544C;
     color: white;
     animation: bookmarkPop 0.35s ease;
 }
@@ -460,4 +460,45 @@ background: #1B7B73;
     35% { transform: scale(1.25); }
     60% { transform: scale(0.95); }
     100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .detail-top {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 16px !important;
+    }
+    .detail-cover {
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+    }
+    .detail-cover img {
+        width: 100% !important;
+        max-width: 200px !important;
+        height: auto !important;
+        aspect-ratio: 2/3;
+    }
+    .detail-info {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .detail-judul {
+        font-size: 20px !important;
+        line-height: 1.3;
+    }
+    .detail-deskripsi {
+        font-size: 14px !important;
+        text-align: left !important;
+    }
+    .detail-genres {
+        justify-content: center !important;
+    }
+    .btn-start {
+        width: 100%;
+        text-align: center;
+    }
 }

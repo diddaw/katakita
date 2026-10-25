@@ -46,7 +46,7 @@ $ceritaList = $ceritaObject->getByUser((int) $_SESSION['user_id']);
                     </a>
                 </li>
               <li>
-                     <a href="/codingpenyet/profile.php">
+                     <a href="/katakita/profile.php">
                       <span class="material-symbols-rounded">account_circle</span>
                      Profile
                   </a>

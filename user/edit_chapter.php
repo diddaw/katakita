@@ -111,11 +111,11 @@ if ($kontenUntukEditor !== '' && $kontenUntukEditor === strip_tags($kontenUntukE
                     <span class="material-symbols-rounded">upload</span>
                     Upload Cerita
                 </a></li>
-                <li><a href="/codingpenyet/profile.php">
+                <li><a href="/katakita/profile.php">
                     <span class="material-symbols-rounded">account_circle</span>
                     Profile
                 </a></li>
-                <li><a href="/codingpenyet/logout.php">
+                <li><a href="/katakita/logout.php">
                     <span class="material-symbols-rounded">logout</span>
                     Logout
                 </a></li>

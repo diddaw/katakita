@@ -89,7 +89,7 @@ $newestList = $stmt->fetchAll();
         }
         .genre-badge {
             background-color: #F3F4F6;
-            color: #1B7B73;
+            color: #FF544C;
             font-size: 11px;
             font-weight: 600;
             padding: 2px 8px;

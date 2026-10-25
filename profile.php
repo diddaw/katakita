@@ -35,12 +35,12 @@ $ceritaList = $ceritaObject->getByUser((int) $_SESSION['user_id']);
         </div>
         <h2><?= htmlspecialchars($user['username']) ?></h2>
         <p><?= htmlspecialchars($user['email']) ?></p>
-        <p style="margin-top:6px; color:#1B7B73; font-weight:600; text-transform:capitalize;"><?= htmlspecialchars($user['role']) ?></p>
+        <p style="margin-top:6px; color:#FF544C; font-weight:600; text-transform:capitalize;"><?= htmlspecialchars($user['role']) ?></p>
     </div>
 
     <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
-    <div class="profile-menu" style="border: 2px solid #1B7B73;">
-        <div class="profile-menu-title" style="color: #1B7B73;">Admin Only</div>
+    <div class="profile-menu" style="border: 2px solid #FF544C;">
+        <div class="profile-menu-title" style="color: #FF544C;">Admin Only</div>
         <a href="admin/index.php">
             <span class="material-symbols-rounded">admin_panel_settings</span>
             <div class="menu-info">

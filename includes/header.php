@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novel & komik Banner</title>
+    <title>katakita</title>
 
     <link rel="stylesheet" href="assets/css/new_releases.css">
     <link rel="stylesheet" href="assets/css/featured.css"> 
     <link rel="stylesheet" href="assets/css/navbar.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="assets/css/recommended.css">
     
     <style> 
-    /*TAMPILAN DASAR HALAMAN WEB*/
         *{
             margin:0;
             padding:0;
@@ -37,12 +35,11 @@
             overflow:hidden;
         }
 
-    /*BAGIAN BANNER SI SLIDENYA*/
         .slide{ 
             position:absolute;
             width:100%;
             height:100%;
-            opacity:0; /*BIAR TRANSPARAN*/
+            opacity:0; 
             transition:1s ease;
         }
 
@@ -58,7 +55,6 @@
             object-position: center;
             filter:brightness(100%);
         }
-/*GRADASI DI BANNER GELAP BIAR LEBIH KELIATAN AJALAH*/
         .overlay{
             position:absolute;
             inset:0;
